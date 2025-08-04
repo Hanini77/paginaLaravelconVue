@@ -13,8 +13,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->text('descripcion')->nullable();
+            $table->decimal('precio', 8, 2); // 8 → Número total de dígitos permitidos (antes y después del punto decimal).
+        //2 → Número de dígitos después del punto decimal (centavos).
             $table->timestamps();
         });
+        
+        
     }
 
     /**
