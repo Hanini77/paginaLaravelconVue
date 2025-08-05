@@ -7,4 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/products', 'ProductController')->middleware('auth');
+//Route::get('/products', [ProductController::class, 'index']);
+Route::resource('/products', 'ProductController');
